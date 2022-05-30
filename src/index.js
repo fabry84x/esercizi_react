@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 
-function greeting(name){
-    let hello = <h1>Hello, {name}</h1>;
-    return hello;
+function add(a,b){
+    let sum = <h2>{a + b}</h2>;
+    return sum;
 }
 
 ReactDOM.render(
-    greeting('Mario'),
+    add(3,4),
     document.getElementById('root')
 );
