@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-let hello = <h1>Hello, World!</h1>;
+
+function greeting(name){
+    let hello = <h1>Hello, {name}</h1>;
+    return hello;
+}
 
 ReactDOM.render(
-    hello,
+    greeting('Mario'),
     document.getElementById('root')
 );
