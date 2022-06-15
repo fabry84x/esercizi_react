@@ -1,7 +1,7 @@
 import  ReactDOM  from "react-dom";
-import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 ReactDOM.render(
-  <InteractiveWelcome />,
+  <Login />,
   document.getElementById('root')
 );   
