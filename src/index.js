@@ -1,7 +1,7 @@
 import  ReactDOM  from "react-dom";
-import { ClickCounter } from "./ClickCounter";
+import { ClickTracker } from "./ClickTracker";
 
 ReactDOM.render(
-  <ClickCounter />,
+  <ClickTracker />,
   document.getElementById('root')
-);  
+);   
