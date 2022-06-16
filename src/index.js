@@ -1,7 +1,7 @@
 import  ReactDOM  from "react-dom";
-import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 ReactDOM.render(
-  <Login />,
+  <UncontrolledLogin />,
   document.getElementById('root')
 );   
