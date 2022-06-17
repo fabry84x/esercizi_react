@@ -17,7 +17,10 @@ export class TodoList extends React.Component {
     handleListItem = () => {
         const list = this.state.items
         list.push(this.state.inputItem)
-        this.setState({list})
+        this.setState({
+            list,
+            inputItem:""
+        })
     }
 
     render() {
