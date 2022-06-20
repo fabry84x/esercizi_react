@@ -4,9 +4,7 @@ import { Container } from "./Container";
 export class App extends React.Component {
     render() {
         return (
-            <Container>
-                <h1>My App</h1>
-            </Container>
+            <Container title="My App"></Container>
         )
     }
 }
