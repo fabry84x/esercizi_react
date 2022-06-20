@@ -1,9 +1,7 @@
-import ReactDOM  from "react-dom";
-import { Welcome } from "./Welcome";
-import "./index.css"
-
+import  ReactDOM  from "react-dom";
+import { Login } from "./Login";
 
 ReactDOM.render(
-    <Welcome />,
+    <Login />,
     document.getElementById('root')
-); 
+  );    

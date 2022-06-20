@@ -2,6 +2,7 @@ import React from "react";
 
 export class Welcome extends React.Component {
     render() {
-        return <h1 className="welcome">Welcome,Gianni!</h1>
+        const {name} = this.props
+        return <h1>{name}</h1>
     }
 } 
