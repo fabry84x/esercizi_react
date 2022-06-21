@@ -4,13 +4,13 @@ import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage"
 
 export class App extends React.Component {
-    state={
-        language:'en'
+    state = {
+        language: 'en'
     }
 
     handleLanguageChange = (event) => {
-        this.setState ({
-            language:event.target.value
+        this.setState({
+            language: event.target.value
         })
     }
 
@@ -26,9 +26,7 @@ export class App extends React.Component {
                         <DisplayLanguage />
                     </Container>
                 </LanguageContext.Provider>
-                
             </div>
-            
         )
     }
 }
