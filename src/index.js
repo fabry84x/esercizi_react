@@ -1,7 +1,7 @@
 import  ReactDOM  from "react-dom";
-import { ClickCounter } from "./ClickCounter";
+import { Login } from "./Login";
 
 ReactDOM.render(
-  <ClickCounter initialValue={7}/>,
+  <Login />,
   document.getElementById('root')
 );   
