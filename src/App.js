@@ -1,16 +1,10 @@
-import { useState } from "react";
-import { Counter } from "./Counter";
+import { GithubUser } from "./GithubUser";
 
 export function App () {
-    const [showCounter,setShowCounter] = useState(true)
-
-    setTimeout(() => {
-        setShowCounter(s => !s)
-    },5000)
 
     return(
         <div>
-            { showCounter && <Counter /> }
+            <GithubUser username='gianmarcotoso'/> 
         </div>
     )
 }
