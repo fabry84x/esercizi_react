@@ -1,13 +1,16 @@
-import { ClickCounter } from "./ClickCounter";
+import { useState } from "react";
+import { Counter } from "./Counter";
 
 export function App () {
+    const [showCounter,setShowCounter] = useState(true)
 
-    const onCounterChange = (count) => {
-        console.log ('the count is now '+ count)
-    }
+    setTimeout(() => {
+        setShowCounter(s => !s)
+    },5000)
+
     return(
         <div>
-            <ClickCounter logCount={onCounterChange}/>
+            { showCounter && <Counter /> }
         </div>
     )
 }
