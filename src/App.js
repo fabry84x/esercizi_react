@@ -1,10 +1,10 @@
-import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export function App () {
 
     return(
         <div>
-            <GithubUser username='gianmarcotoso'/> 
+            <GithubUserList/> 
         </div>
     )
 }
