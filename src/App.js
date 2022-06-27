@@ -1,9 +1,9 @@
-import {ClickCounter} from "./ClickCounter"
+import {Form} from "./Form"
 
 export function App() {
   return(
     <div>
-      <ClickCounter />
+      <Form />
     </div>
   )
 }
