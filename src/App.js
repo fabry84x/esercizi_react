@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { useMemo } from "react";
+import { FilteredList } from "./FilteredList"
 
-function App() {
+export function App() {
+  function getValues() {
+    const persons = [
+      {
+        id: 1,
+        name: 'Giacomo',
+        age: 21,
+      },
+      {
+        id: 2,
+        name: 'Giovanni',
+        age: 15,
+      },
+      {
+        id: 3,
+        name: 'Paola',
+        age: 26,
+      },
+      {
+        id: 4,
+        name: 'Roberta',
+        age: 29,
+      },
+      {
+        id: 5,
+        name: 'Giorgio',
+        age: 24,
+      }
+    ];
+
+    return persons.filter(person => person.age > 18).map(filteredArray => (
+      <li>
+        {filteredArray.name}
+      </li>
+    ))
+  }
+
+  const data = useMemo(() => getValues(), []) 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FilteredList values={data} />
     </div>
-  );
+  )
 }
-
-export default App;
