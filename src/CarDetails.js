@@ -1,36 +1,22 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 
-export function CarDetails() {
-    const [model,setModel]=useState('fiat')
-    const [year,setYear]=useState(2022)
-    const [color,setColor]=useState('blue')
+export function CarDetails({initialData}) {
 
-    const inputRef = useRef()
 
-    useEffect(()=>{
-        inputRef.current.value=""
-    },[])
-    
-    function handleModelChange(event) {
-        setModel(event.target.value)
+    const formRef = useRef()
+
+
+    function handleFormSubmit() {
+        formRef.current.reset()
     }
 
-    function handleYearChange(event) {
-        setYear(event.target.value)
-    }
-
-    function handleColorChange(event) {
-        setColor(event.target.value)
-    }
-
-
-    
-    return (
+return (
         <div>
-            <form >
-                <input ref={inputRef} value={model} onChange={handleModelChange}/>
-                <input ref={inputRef} value={year} onChange={handleYearChange}/>
-                <input ref={inputRef} value={color} onChange={handleColorChange}/>
+            <form ref={formRef} onSubmit={handleFormSubmit}>
+                <input defaultValue={initialData.model} />
+                <input defaultValue={initialData.year}  />
+                <input defaultValue={initialData.color} />
+                <input type='submit'/>
             </form>
         </div>
     )

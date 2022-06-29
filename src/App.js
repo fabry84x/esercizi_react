@@ -2,10 +2,16 @@ import { CarDetails } from "./CarDetails"
 
 
 export function App() {
+  
+  const defaultCar = {
+    model: 'fiat',
+    year: 2022,
+    color: 'red'
+  }
 
-  return(
+  return (
     <div>
-      <CarDetails />
+      <CarDetails initialData={defaultCar} />
     </div>
   )
 }
