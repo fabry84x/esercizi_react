@@ -3,7 +3,7 @@ import {Welcome} from "./Welcome"
 import {Counter} from "./Counter"
 import {ShowGithubUser} from "./ShowGithubUser"
 import {GithubUser} from "./GithubUser"
-
+import { NotFound } from "./NotFound"
 
 export function App() {
     return(
@@ -13,6 +13,7 @@ export function App() {
             <Route path="/users" element={<ShowGithubUser />}>
                 <Route path=":username" element={<GithubUser />}/>
             </Route>
+            <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }
