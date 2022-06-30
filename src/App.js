@@ -3,7 +3,7 @@ import {GithubUser} from "./GithubUser"
 export function App() {
     return(
       <div>
-        <GithubUser username='gianmarcotoso' />
+        <GithubUser username={null} />
       </div>
     )
   } 
