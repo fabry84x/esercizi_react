@@ -2,24 +2,26 @@ import {useState, useEffect} from 'react';
 
 export function GithubUserList() {
 
-    const[list,setList]=useState([])
-    const [user,setUser] = useState("");
-   
-    function handleInputChange(event) {
-        const value = event.target.value
-        setUser(value)
-    }
+    const [data,setData]=useState()
 
-    function handleClick() {
-        setList([...list, user]) 
-    }
-    
-    console.log(list)
+    useEffect(()=>{
+        fetch(`https://api.github.com/users`)
+        .then(response=>{
+            return response.json()
+        })
+        .then(json=>{
+            setData(json)
+        })
+    },[])
+
+   
    return(
         <div>
-            <input name="user" value={user} onChange={handleInputChange}/>
-            <button onClick={handleClick}>Add username</button>
-            <p></p>
+            {data && (
+                <ul>
+                    {data.map((user)=>(<li key={user.login}>{user.login}</li>))}
+                </ul>
+            )}
         </div>
     )
    
