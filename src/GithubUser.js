@@ -19,7 +19,7 @@ export function GithubUser () {
 
     return(
         <h3>
-            {data && data.name}, {data && data.location}
+            {data && data.name}
         </h3>
     )
 } 

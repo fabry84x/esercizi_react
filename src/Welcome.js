@@ -8,7 +8,7 @@ export function Welcome(props) {
             <h1>Welcome, {props.name}</h1>
             <Link to="/">Welcome |</Link>
             <Link to="/counter">Counter |</Link>
-            <Link to="/users">ShowGithubUser</Link>
+            <Link to="/users">GithubUserList</Link>
         </div>
     )
 }  
